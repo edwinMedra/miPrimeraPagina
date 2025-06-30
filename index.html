@@ -3,286 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ford Mustang GT 2023 | Especificaciones Técnicas</title>
+    <title>Toyota Yaris 2010 Blanco | Especificaciones</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #151515;
-            --secondary: #e62429;
-            --light: #f8f8f8;
-            --gray: #e0e0e0;
-            --dark-gray: #888;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--primary);
-            background-color: var(--light);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background-color: var(--primary);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .brand {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .brand h1 {
-            color: var(--light);
-            font-weight: 400;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
-        
-        .brand span {
-            color: var(--secondary);
-            font-weight: 600;
-        }
-        
-        .hero {
-            height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero-content h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-        
-        .specs {
-            padding: 60px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 400;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--secondary);
-        }
-        
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        .spec-card {
-            background: white;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        
-        .spec-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .spec-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-        
-        .spec-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .spec-value {
-            font-size: 1.8rem;
-            font-weight: 300;
-            color: var(--secondary);
-        }
-        
-        .spec-description {
-            margin-top: 10px;
-            color: var(--dark-gray);
-            font-size: 0.9rem;
-        }
-        
-        .gallery {
-            background-color: var(--primary);
-            padding: 60px 0;
-            color: white;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .gallery-item {
-            height: 250px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 4px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .gallery-item:nth-child(1) {
-            background-image: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3');
-        }
-        
-        .gallery-item:nth-child(2) {
-            background-image: url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3');
-        }
-        
-        .gallery-item:nth-child(3) {
-            background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3');
-        }
-        
-        .gallery-item-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.7);
-            padding: 15px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-item-overlay {
-            transform: translateY(0);
-        }
-        
-        .features {
-            padding: 60px 0;
-        }
-        
-        .feature-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid var(--gray);
-        }
-        
-        .feature-icon {
-            min-width: 50px;
-            height: 50px;
-            background: var(--light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            color: var(--secondary);
-            font-size: 1.2rem;
-        }
-        
-        .feature-content h3 {
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        .copyright {
-            color: var(--dark-gray);
-            font-size: 0.9rem;
-            margin-top: 20px;
-        }
-        
-        @media (max-width: 768px) {
-            .hero {
-                height: 50vh;
-            }
-            
-            .hero-content h2 {
-                font-size: 2.2rem;
-            }
-            
-            .specs-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="brand">
-                <h1>MUSTANG <span>GT</span></h1>
+            <div class="header-content">
+                <div class="brand">
+                    <h1>TOYOTA <span>YARIS</span></h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#especificaciones">Especificaciones</a>
+                    <a href="#galeria">Galería</a>
+                    <a href="#caracteristicas">Características</a>
+                    <a href="#tecnica">Ficha Técnica</a>
+                </div>
             </div>
         </div>
     </header>
@@ -290,109 +30,165 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>FORD MUSTANG GT 2023</h2>
-                <p>El ícono americano redefinido: potencia, estilo y tecnología en su máxima expresión.</p>
+                <h2>TOYOTA YARIS 2010</h2>
+                <div class="subtitle">Hatchback Blanco - Eficiencia y confiabilidad en la ciudad</div>
+                <div class="hero-badge">Modelo Icono</div>
             </div>
         </div>
     </section>
     
-    <section class="specs">
+    <section class="specs" id="especificaciones">
         <div class="container">
-            <h2 class="section-title">ESPECIFICACIONES TÉCNICAS</h2>
+            <h2 class="section-title">ESPECIFICACIONES CLAVE</h2>
             <div class="specs-grid">
                 <div class="spec-card">
-                    <div class="spec-icon">⚙️</div>
+                    <div class="spec-icon"><i class="fas fa-tachometer-alt"></i></div>
                     <h3 class="spec-title">Motor</h3>
-                    <div class="spec-value">5.0L V8</div>
-                    <p class="spec-description">Motor Coyote V8 de aspiración natural con 460 HP y 420 lb-pie de torque</p>
+                    <div class="spec-value">1.5L 4NZ-FE</div>
+                    <p class="spec-description">4 cilindros en línea, 16 válvulas DOHC, 106 HP @ 6000 RPM</p>
                 </div>
                 
                 <div class="spec-card">
-                    <div class="spec-icon">🚀</div>
-                    <h3 class="spec-title">Aceleración</h3>
-                    <div class="spec-value">4.3 s</div>
-                    <p class="spec-description">0 a 100 km/h con transmisión automática de 10 velocidades</p>
+                    <div class="spec-icon"><i class="fas fa-bolt"></i></div>
+                    <h3 class="spec-title">Rendimiento</h3>
+                    <div class="spec-value">14.5 km/L</div>
+                    <p class="spec-description">Consumo combinado (ciudad/carretera) con transmisión automática</p>
                 </div>
                 
                 <div class="spec-card">
-                    <div class="spec-icon">⏱️</div>
-                    <h3 class="spec-title">Velocidad Máxima</h3>
-                    <div class="spec-value">250 km/h</div>
-                    <p class="spec-description">Limitada electrónicamente para mayor seguridad</p>
+                    <div class="spec-icon"><i class="fas fa-car"></i></div>
+                    <h3 class="spec-title">Dimensiones</h3>
+                    <div class="spec-value">3.88 m</div>
+                    <p class="spec-description">Longitud total | Capacidad de baúl: 272 litros</p>
                 </div>
                 
                 <div class="spec-card">
-                    <div class="spec-icon">⛽</div>
-                    <h3 class="spec-title">Consumo</h3>
-                    <div class="spec-value">8.7 km/L</div>
-                    <p class="spec-description">Consumo combinado (ciudad/carretera)</p>
+                    <div class="spec-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 class="spec-title">Transmisión</h3>
+                    <div class="spec-value">4 Velocidades</div>
+                    <p class="spec-description">Automática con modo secuencial | 0-100 km/h en 10.5 segundos</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="gallery">
+    <section class="gallery" id="galeria">
         <div class="container">
-            <h2 class="section-title" style="color: white;">GALERÍA</h2>
+            <h2 class="section-title">GALERÍA DEL YARIS BLANCO</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="gallery-item-overlay">
-                        <h3>Frente agresivo</h3>
-                        <p>Diseño icónico con parrilla negra y luces LED</p>
+                        <img src="https://eazycarsuae.com/wp-content/uploads/2023/11/ff927222-c514-417d-a9b0-3dc1797a7eb0.jpeg" alt="">
+                        <h3>Vista Frontal</h3>
+                        <p>Diseño compacto y aerodinámico</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
                     <div class="gallery-item-overlay">
-                        <h3>Perfil deportivo</h3>
-                        <p>Líneas musculares y llantas de 19"</p>
+                        <img src="https://eazycarsuae.com/wp-content/uploads/2023/11/ff927222-c514-417d-a9b0-3dc1797a7eb0.jpeg" alt="">
+                        <h3>Interior</h3>
+                        <p>Espacio optimizado con acabados de calidad</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
                     <div class="gallery-item-overlay">
-                        <h3>Interior premium</h3>
-                        <p>Asientos deportivos con detalles en cuero</p>
+                        <img src="https://eazycarsuae.com/wp-content/uploads/2023/11/ff927222-c514-417d-a9b0-3dc1797a7eb0.jpeg" alt="">
+                        <h3>Vista Trasera</h3>
+                        <p>Hatchback funcional con amplio acceso</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="features">
+    <section class="features" id="caracteristicas">
         <div class="container">
             <h2 class="section-title">CARACTERÍSTICAS DESTACADAS</h2>
             <div class="feature-list">
                 <div class="feature-item">
-                    <div class="feature-icon">🔊</div>
+                    <div class="feature-icon"><i class="fas fa-gas-pump"></i></div>
                     <div class="feature-content">
-                        <h3>Sistema de Escape Activo</h3>
-                        <p>Controla el sonido del escape con cuatro modos diferentes: silencioso, normal, deportivo y pista.</p>
+                        <h3>Eficiencia de Combustible</h3>
+                        <p>Motor con tecnología VVT-i que optimiza el consumo de combustible sin sacrificar rendimiento. Sistema de inyección electrónica que asegura un funcionamiento eficiente en todo tipo de condiciones.</p>
                     </div>
                 </div>
                 
                 <div class="feature-item">
-                    <div class="feature-icon">📱</div>
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="feature-content">
-                        <h3>Tecnología SYNC 4</h3>
-                        <p>Pantalla táctil de 12" con Apple CarPlay, Android Auto, navegación y conectividad inalámbrica.</p>
+                        <h3>Sistema de Seguridad</h3>
+                        <p>Incluye ABS, EBD, airbags frontales y laterales, y estructura de impacto inteligente. Cinturones de seguridad de 3 puntos con pretensores y sistema de frenado de emergencia.</p>
                     </div>
                 </div>
                 
                 <div class="feature-item">
-                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-icon"><i class="fas fa-car-side"></i></div>
                     <div class="feature-content">
-                        <h3>Asistencia al Conductor</h3>
-                        <p>Sistema Ford Co-Pilot360 con control crucero adaptativo, alerta de colisión y asistencia de carril.</p>
+                        <h3>Manejo Ágil</h3>
+                        <p>Dirección asistida eléctrica que facilita el estacionamiento y maniobras en espacios reducidos. Suspensión McPherson delantera y torsión trasera para un andar suave y estable.</p>
                     </div>
                 </div>
                 
                 <div class="feature-item">
-                    <div class="feature-icon">🏁</div>
+                    <div class="feature-icon"><i class="fas fa-music"></i></div>
                     <div class="feature-content">
-                        <h3>Modos de Conducción</h3>
-                        <p>Normal, Sport, Track, Drag y Wet/Snow para adaptarse a cualquier condición de manejo.</p>
+                        <h3>Sistema de Entretenimiento</h3>
+                        <p>Radio CD/MP3 con 4 altavoces, entrada auxiliar para dispositivos externos. Controles de audio al volante para mayor seguridad al conducir.</p>
                     </div>
+                </div>
+            </div>
+            
+            <div class="spec-table" id="tecnica">
+                <h3>FICHA TÉCNICA COMPLETA</h3>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Especificación</th>
+                        </tr>
+                        <tr>
+                            <td>Motor</td>
+                            <td>1.5L 4NZ-FE, 4 cilindros en línea, DOHC 16V</td>
+                        </tr>
+                        <tr>
+                            <td>Potencia</td>
+                            <td>106 HP @ 6000 RPM</td>
+                        </tr>
+                        <tr>
+                            <td>Torque</td>
+                            <td>103 lb-pie @ 4200 RPM</td>
+                        </tr>
+                        <tr>
+                            <td>Transmisión</td>
+                            <td>Automática de 4 velocidades con modo secuencial</td>
+                        </tr>
+                        <tr>
+                            <td>Tracción</td>
+                            <td>Delantera</td>
+                        </tr>
+                        <tr>
+                            <td>Consumo de combustible</td>
+                            <td>Ciudad: 12.8 km/L | Carretera: 16.3 km/L | Combinado: 14.5 km/L</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensiones (LxAxA)</td>
+                            <td>3.88m x 1.69m x 1.53m</td>
+                        </tr>
+                        <tr>
+                            <td>Peso</td>
+                            <td>1,075 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidad de baúl</td>
+                            <td>272 litros (expandible a 737 litros con asientos abatidos)</td>
+                        </tr>
+                        <tr>
+                            <td>Neumáticos</td>
+                            <td>185/60 R15</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -401,11 +197,70 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">MUSTANG<span>GT</span></div>
-                <p>El ícono del músculo americano desde 1964</p>
-                <p class="copyright">© 2023 Ford Motor Company. Todos los derechos reservados.</p>
+                <div class="footer-section">
+                    <div class="logo-footer">YARIS<span>2010</span></div>
+                    <p>El hatchback compacto que combina eficiencia, confiabilidad y estilo en un diseño urbano perfecto.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <div class="footer-links">
+                        <a href="#especificaciones">Especificaciones</a>
+                        <a href="#galeria">Galería</a>
+                        <a href="#caracteristicas">Características</a>
+                        <a href="#tecnica">Ficha Técnica</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="footer-links">
+                        <a href="#"><i class="fas fa-phone"></i> +1 234 567 890</a>
+                        <a href="#"><i class="fas fa-envelope"></i> info@toyotayaris2010.com</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Concesionarios en todo el país</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 Toyota Yaris 2010 Hatchback Blanco. Todos los derechos reservados. Toyota y Yaris son marcas registradas de Toyota Motor Corporation.</p>
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Efecto de desplazamiento suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animación para los elementos de especificaciones al aparecer en pantalla
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.spec-card, .feature-item, .gallery-item').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
